@@ -22,7 +22,15 @@ const LinkedList = function(){
         }
     }
 
-    return {head,tail,append};
+    const prepend = function(value){
+        if (headNode == null){
+            headNode = new Node(value);
+        } else {
+            headNode = new Node(value, headNode);
+        }
+    }
+
+    return {head,tail,append, prepend};
 }
 
 // Node contains value property, nextNode
