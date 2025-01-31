@@ -7,7 +7,7 @@ const LinkedList = function(){
     }
 
     const tail = function(){
-        let node = headNode.nextNode;
+        let node = headNode;
         while (node.nextNode != null){
             node = node.nextNode;
         }
@@ -30,7 +30,22 @@ const LinkedList = function(){
         }
     }
 
-    return {head,tail,append, prepend};
+    const size = function(){
+        let count = 0;
+        if (headNode == null){
+            return count;
+        } else{
+            count++;
+        }
+        let node = headNode;
+        while (node.nextNode != null){
+            node = node.nextNode;
+            count++;
+        }
+        return count;
+    }
+
+    return {head,tail,append, prepend, size};
 }
 
 // Node contains value property, nextNode

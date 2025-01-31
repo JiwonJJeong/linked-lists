@@ -1,6 +1,6 @@
-import {LinkedList, Node} from "linkedlist.js";
+import {LinkedList, Node} from "./linkedlist.js";
 
-const list = newLinkedList();
+const list = new LinkedList();
 list.append("dog");
 list.append("cat");
 list.append("parrot");
