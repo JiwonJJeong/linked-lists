@@ -45,7 +45,21 @@ const LinkedList = function(){
         return count;
     }
 
-    return {head,tail,append, prepend, size};
+    // count index from 1
+    // head > head> head > null
+    const at = function(index){
+        let node = headNode;
+        while (index >0){
+            node = node.nextNode;
+            index--;
+            if (node == null){
+                return null;
+            }
+        }
+        return node;
+    }
+
+    return {head,tail,append, prepend, size, at};
 }
 
 // Node contains value property, nextNode
