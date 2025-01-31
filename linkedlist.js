@@ -18,7 +18,7 @@ const LinkedList = function(){
         if (headNode == null){
             headNode = new Node(value);
         } else {
-            tail.nextNode = new Node(value);
+            tail().nextNode = new Node(value);
         }
     }
 
@@ -100,13 +100,13 @@ const LinkedList = function(){
         if (headNode == null){
             return null;
         }
-        let string = headNode.value;
+        let string = `( ${headNode.value} )`;
         let node = headNode.nextNode;
         while (node != null){
-            string += ` -> ${Node.value}`;
+            string += ` -> ( ${node.value} )`;
             node = node.nextNode;
         }
-        string += "null";
+        string += " -> null";
         return string;
     }
 
