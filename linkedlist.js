@@ -67,6 +67,7 @@ const LinkedList = function(){
         secondToLastNode.nextNode = null;
     }
 
+    // returns true if value passed is in list, else returns false
     const contains = function(value){
         let node = headNode;
         while(node != null){
@@ -79,6 +80,7 @@ const LinkedList = function(){
         return false;
     }
 
+    // returns index of node containing value, or null if not found
     const find = function(value){
         let node = headNode;
         let index = 1;
@@ -93,7 +95,22 @@ const LinkedList = function(){
         return null;
     }
 
-    return {head,tail,append, prepend, size, at, pop, contains, find};
+    // returns string of node values in format "(value) -> (value) -> null"
+    const toString = function(){
+        if (headNode == null){
+            return null;
+        }
+        let string = headNode.value;
+        let node = headNode.nextNode;
+        while (node != null){
+            string += ` -> ${Node.value}`;
+            node = node.nextNode;
+        }
+        string += "null";
+        return string;
+    }
+
+    return {head,tail,append, prepend, size, at, pop, contains, find, toString};
 }
 
 // Node contains value property, nextNode
