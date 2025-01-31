@@ -46,7 +46,6 @@ const LinkedList = function(){
     }
 
     // count index from 1
-    // head > head> head > null
     const at = function(index){
         if (index <= 0){
             return null;
@@ -62,9 +61,13 @@ const LinkedList = function(){
         return node;
     }
 
-    const pop = 
+    const pop = function(){
+        let secondToLastIndex = size() - 1;
+        let secondToLastNode = at(secondToLastIndex);
+        secondToLastNode.nextNode = null;
+    }
 
-    return {head,tail,append, prepend, size, at};
+    return {head,tail,append, prepend, size, at, pop};
 }
 
 // Node contains value property, nextNode
