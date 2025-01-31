@@ -48,8 +48,11 @@ const LinkedList = function(){
     // count index from 1
     // head > head> head > null
     const at = function(index){
+        if (index <= 0){
+            return null;
+        }
         let node = headNode;
-        while (index >0){
+        while (index > 1){
             node = node.nextNode;
             index--;
             if (node == null){
@@ -58,6 +61,8 @@ const LinkedList = function(){
         }
         return node;
     }
+
+    const pop = 
 
     return {head,tail,append, prepend, size, at};
 }
