@@ -27,7 +27,7 @@ const LinkedList = function(){
 
 // Node contains value property, nextNode
 
-const Node = function(value, nextNode){
+const Node = function(value = null, nextNode = null){
     return{
         value,
         nextNode,
