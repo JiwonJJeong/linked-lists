@@ -67,7 +67,33 @@ const LinkedList = function(){
         secondToLastNode.nextNode = null;
     }
 
-    return {head,tail,append, prepend, size, at, pop};
+    const contains = function(value){
+        let node = headNode;
+        while(node != null){
+            if (node.value == value){
+                return true;
+            } else {
+                node = node.nextNode;
+            }
+        }
+        return false;
+    }
+
+    const find = function(value){
+        let node = headNode;
+        let index = 1;
+        while(node != null){
+            if (node.value == value){
+                return index;
+            } else {
+                node = node.nextNode;
+                index++;
+            }
+        }
+        return null;
+    }
+
+    return {head,tail,append, prepend, size, at, pop, contains, find};
 }
 
 // Node contains value property, nextNode
