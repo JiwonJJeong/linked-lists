@@ -110,7 +110,40 @@ const LinkedList = function(){
         return string;
     }
 
-    return {head,tail,append, prepend, size, at, pop, contains, find, toString};
+    // inserts new Node with value at index (counting from 1)
+    const insertAt = function(value, index){
+        const priorIndex = index-1;
+        if (priorIndex == 0){
+            prepend(value);
+            return;
+        }
+        let priorNode = at(priorIndex);
+        if (priorNode == null){
+            error.log(`${index} is not valid index.`);
+            return;
+        } else {
+            const nextNode = priorNode.nextNode;
+            priorNode.nextNode = new Node(value, nextNode);
+        }
+    }
+
+    // removes node at index (counting from 1)
+    const removeAt = function(index){
+        const priorIndex = index-1;
+        if (priorIndex == 0){
+            let nodeToRemove = headNode;
+            headNode = headNode.nextNode;
+            nodeToRemove = null;
+            return;
+        }
+        let priorNode = at(priorIndex);
+        let nodeToRemove = priorNode.nextNode;
+        const nextNode = priorNode.nextNode.nextNode;
+        priorNode.nextNode = nextNode;
+        nodeToRemove = null;
+    }
+
+    return {head,tail,append, prepend, size, at, pop, contains, find, toString, insertAt, removeAt};
 }
 
 // Node contains value property, nextNode
