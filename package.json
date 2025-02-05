@@ -1,0 +1,19 @@
+{
+  "name": "linked-lists",
+  "version": "1.0.0",
+  "description": "The Odin Project JS project to create linked list factory function with various modifying helper functions.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JiwonJJeong/linked-lists.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JiwonJJeong/linked-lists/issues"
+  },
+  "homepage": "https://github.com/JiwonJJeong/linked-lists#readme"
+}
