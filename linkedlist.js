@@ -168,6 +168,7 @@ const LinkedList = function () {
     toString,
     insertAt,
     removeAt,
+    findNode,
   };
 };
 
