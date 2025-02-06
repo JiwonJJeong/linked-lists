@@ -68,10 +68,10 @@ const LinkedList = function(){
     }
 
     // returns true if value passed is in list, else returns false
-    const contains = function(value){
+    const contains = function(value, compareKey = "value"){
         let node = headNode;
         while(node != null){
-            if (node.value == value){
+            if (node.value == value || node.value[compareKey] == value){
                 return true;
             } else {
                 node = node.nextNode;
@@ -81,11 +81,11 @@ const LinkedList = function(){
     }
 
     // returns index of node containing value, or null if not found
-    const find = function(value){
+    const find = function(value, compareKey = "value"){
         let node = headNode;
         let index = 1;
         while(node != null){
-            if (node.value == value){
+            if (node.value == value || node.value[compareKey] == value){
                 return index;
             } else {
                 node = node.nextNode;
