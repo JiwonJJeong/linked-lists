@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "The Odin Project JS project to create linked list factory function with various modifying helper functions.",
   "main": "main.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
