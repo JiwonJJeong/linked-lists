@@ -94,6 +94,20 @@ const LinkedList = function () {
     return null;
   };
 
+  // returns node containing value, or null if not found
+  // but checks for node.callbackfunction() being equal to value
+  const findCallback = function (value, callbackFunction) {
+    let node = headNode;
+    while (node != null) {
+      if (node.value[callbackFunction]() == value) {
+        return node;
+      } else {
+        node = node.nextNode;
+      }
+    }
+    return null;
+  };  
+
   // same as find, but returns the node, not index
   const findNode = function (value, compareKey = "value") {
     let node = headNode;
@@ -169,6 +183,7 @@ const LinkedList = function () {
     insertAt,
     removeAt,
     findNode,
+    findCallback,
   };
 };
 

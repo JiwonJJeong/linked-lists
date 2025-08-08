@@ -1,12 +1,11 @@
 # linked-lists
 The Odin Project JS project to create linked list factory function with various modifying helper functions.
 
-## Skills Used
-- Practice logic and algorithms with linked list data structure
-- Create my own LinkedList factory
-- Run code and manage files in command line with git, gitHub, Node, ESM
+## Achieved Learning Goals
+- **Familiarity with linked lists**: Authored data structure and methods with ES6 class syntax from near scratch
 
-## List of helper functions (description from The Odin Project)
+## List of helper functions
+*Descriptions From [The Odin Project](https://www.theodinproject.com/lessons/javascript-linked-lists)*
 - **append(value)** adds a new node containing value to the end of the list
 - **prepend(value)** adds a new node containing value to the start of the list
 - **size** returns the total number of nodes in the list
